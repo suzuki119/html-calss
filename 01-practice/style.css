@@ -82,7 +82,7 @@ h1 {
     border-radius: 50%;
     background-color: #72C9F3;
     top: 0;
-    left: 48%;
+    left: 47%;
 
 }
 
@@ -116,8 +116,26 @@ h1 {
     padding: 6px 12px;
 }
 
-#new {
+.new {
     border-bottom: #F5F5F5 solid;
+}
+
+.new img {
+    position: relative;
+    z-index: 1;
+}
+
+.new img::after {
+    content: "NEW";
+    position: absolute;
+    font-size: 14px;
+    width: 100px;
+    height: 100px;
+    padding: 6px 10px;
+    background-color: #1E1E1E;
+    top: 0;
+    z-index: 2;
+
 
 }
 
@@ -125,4 +143,30 @@ footer {
     background-color: #1E1E1E;
     color: #fff;
     text-align: center;
+    padding-bottom: 100px;
+}
+
+dl {
+    display: inline-block;
+    margin: 100px auto 100px;
+}
+
+dl div {
+    display: flex;
+    padding: 20px;
+    border-bottom: #fff solid;
+
+}
+
+dl div:last-child {
+    border-bottom: none;
+}
+
+dt {
+    width: 92px;
+    text-align: left;
+}
+
+small {
+    font-size: 12px;
 }
