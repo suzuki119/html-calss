@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+body {
+    font-size: 14px;
+    font-family: "Times New Roman",
+        "YuMincho",
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "MS PMincho",
+        serif;
+    font-weight: normal;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    color: #1E1E1E;
+
+}
+
+.inner {
+    width: 84%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    margin: 40px 0;
+}
+
+.mainvisual {
+    background: url(./images/bg_main.png) no-repeat;
+    background-size: cover;
+    padding: 240px 0 80px;
+}
+
+.top {
+    width: 343px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+}
+
+.top h2 {
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+}
+
+.top h3 {
+    margin-left: 40px;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.discussion h2 {
+    text-align: center;
+    margin-left: 40px;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    padding-top: 55px;
+}
+
+.discussion h2::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #72C9F3;
+    top: 0;
+    left: 48%;
+
+}
+
+.discussion h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 44%;
+    width: 80px;
+    height: 1px;
+    background-color: #1E1E1E;
+}
+
+.discussion article {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.discussion p {
+    margin: 20px 0;
+}
+
+.discussion a {
+    display: block;
+}
+
+.discussion li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #F5F5F5;
+    padding: 6px 12px;
+}
+
+#new {
+    border-bottom: #F5F5F5 solid;
+
+}
+
+footer {
+    background-color: #1E1E1E;
+    color: #fff;
+    text-align: center;
+}
