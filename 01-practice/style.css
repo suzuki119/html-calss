@@ -17,7 +17,7 @@ body {
 
 .inner {
     width: 84%;
-    max-width: 960px;
+    max-width: 1260px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -38,9 +38,14 @@ h1 {
 }
 
 .mainvisual {
-    background: url(./images/bg_main.png) no-repeat;
+    background: url(./images/bg_main.png) no-repeat center;
     background-size: cover;
     padding: 240px 0 80px;
+    margin: 0 8%;
+}
+
+.mainvisual .inner {
+    width: 100%;
 }
 
 .top {
@@ -65,32 +70,33 @@ h1 {
 
 .discussion h2 {
     text-align: center;
-    margin-left: 40px;
     font-size: 36px;
     letter-spacing: 0.1em;
-    position: relative;
     margin-top: 100px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     padding-top: 55px;
 }
 
 .discussion h2::before {
     content: "";
-    position: absolute;
+    display: block;
+    margin: auto;
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    margin-bottom: 20px;
     background-color: #72C9F3;
     top: 0;
-    left: 47%;
+    margin-top: 20px;
 
 }
 
 .discussion h2::after {
     content: "";
-    position: absolute;
+    display: block;
+    margin: auto;
     bottom: 0;
-    left: 44%;
+    left: 50px;
     width: 80px;
     height: 1px;
     background-color: #1E1E1E;
@@ -114,27 +120,26 @@ h1 {
     margin-right: 10px;
     background-color: #F5F5F5;
     padding: 6px 12px;
+    margin-top: 5px;
 }
 
 .new {
     border-bottom: #F5F5F5 solid;
 }
 
-.new img {
+.new-topic {
     position: relative;
-    z-index: 1;
 }
 
-.new img::after {
+.new-topic::after {
     content: "NEW";
+    display: inline-block;
     position: absolute;
     font-size: 14px;
-    width: 100px;
-    height: 100px;
     padding: 6px 10px;
-    background-color: #1E1E1E;
+    background-color: #fff;
     top: 0;
-    z-index: 2;
+    left: 0;
 
 
 }
@@ -169,4 +174,24 @@ dt {
 
 small {
     font-size: 12px;
+}
+
+@media (640px<=width) {
+    .mainvisual .inner {
+        width: 84%;
+    }
+
+    .mainvisual {
+        margin: 0;
+    }
+
+    .discussion .inner {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 60px;
+    }
+
+    .new {
+        border: none;
+    }
 }
