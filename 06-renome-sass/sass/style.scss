@@ -58,6 +58,12 @@ img {
         @include inner();
         display: grid;
         row-gap: 15px;
+
+        @include mq() {
+            grid-auto-flow: column;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__logo {
