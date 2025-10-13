@@ -1,0 +1,30 @@
+@use 'saas:math';
+
+$breakpoints: (
+    "desktop":640px,
+    "large":1200px,
+
+);
+
+@mixin mq($breakpoint) {
+    @media (#{map-get($breakpoints,$breakpoint)}<=width) {
+        @content;
+
+    }
+}
+
+body {}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.btn {
+    margin-left: auto;
+
+    @include mq(desktop) {
+        margin: 100%;
+    }
+}
