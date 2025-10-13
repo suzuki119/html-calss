@@ -1,30 +1,85 @@
-@use 'saas:math';
+@use "sass:math";
 
-$breakpoints: (
-    "desktop":640px,
-    "large":1200px,
-
+$bs: (
+    "desktop": 640px,
 );
 
-@mixin mq($breakpoint) {
-    @media (#{map-get($breakpoints,$breakpoint)}<=width) {
-        @content;
+$color-text: #404040;
+$color-main: #985E5B;
+$color-bg: #EDEFF2;
 
+$font-famly-base: "游ゴシック", "Yu Gothic", Helvetica, Arial, sans-serif;
+
+@mixin mq($b: desktop) {
+    @media (#{map-get($bs, $b)} <=width) {
+        @content;
     }
 }
 
-body {}
+@mixin inner($mw: 800px, $w: percentage(math.div(560, 640))) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    line-height: math.div(24, 14);
+    letter-spacing: #{math.div(100,1000)}em;
+}
 
 img {
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
-.btn {
-    margin-left: auto;
+/*--------common-------*/
+/*header*/
+.header {
+    padding: 40px 0;
+    text-align: center;
 
-    @include mq(desktop) {
-        margin: 100%;
+    &__inner {
+        @include inner();
     }
 }
+
+/*footer*/
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        row-gap: 15px;
+    }
+
+    &__logo {
+        margin: auto;
+    }
+
+    &__copy {
+        font-size: 12px;
+        line-height: math.div(18, 12);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------index-------*/

@@ -1,2 +1,50 @@
+body {
+  color: #404040;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.1em;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/*--------common-------*/
+/*header*/
+.header {
+  padding: 40px 0;
+  text-align: center;
+}
+.header__inner {
+  max-width: 800px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*footer*/
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #EDEFF2;
+}
+.footer__inner {
+  max-width: 800px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  row-gap: 15px;
+}
+.footer__logo {
+  margin: auto;
+}
+.footer__copy {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/*--------index-------*/
 /*# sourceMappingURL=style.css.map */
