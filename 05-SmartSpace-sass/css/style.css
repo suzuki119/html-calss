@@ -199,4 +199,9 @@ img {
 .another__info {
   order: 2;
 }
+
+.mainvisual {
+  padding: 350px 0 120px;
+  background: url(../images/);
+}
 /*# sourceMappingURL=style.css.map */
