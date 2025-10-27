@@ -32,6 +32,10 @@ img {
   letter-spacing: 0.1em;
 }
 
+p {
+  overflow-wrap: anywhere;
+}
+
 .gnav__list {
   display: grid;
   grid-auto-flow: column;
@@ -72,5 +76,54 @@ img {
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.philosphhy {
+  padding-bottom: 5rem;
+}
+.philosphhy__inner {
+  max-width: 1000px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.philosphhy__title {
+  margin-bottom: 3.75rem;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: math(54, 32);
+  text-align: center;
+}
+.philosphhy__title::before {
+  content: "philosphhy";
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.philosphhy__title::after {
+  content: "";
+  display: block;
+  width: 6.25rem;
+  height: 2px;
+  background-color: #E40065;
+  margin: 1.5rem auto 0;
+}
+.philosphhy__text {
+  max-width: 48.75rem;
+  margin: auto;
+  display: grid;
+  row-gap: 3.75rem;
+  text-align: center;
+}
+.philosphhy p {
+  line-height: 2.4285714286;
+}
+@media (width >= 500px) {
+  .philosphhy p {
+    word-break: keep-all;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -29,7 +29,8 @@ $font-family-mincho: "Times New Roman", Times, "Hiragino Mincho ProN", "Yu Minch
 // --- Breakpoints ---
 $breakpoints: (
     "tablet": 768px,
-    "desktop": 640px
+    "desktop": 640px,
+    "philosophy":500px,
 );
 
 
@@ -74,6 +75,34 @@ $breakpoints: (
     margin-right: auto;
 }
 
+@mixin title--main($t: "") {
+    margin-bottom: rem(60);
+    font-size: rem(32);
+    font-weight: bold;
+    line-height: math(54, 32);
+    text-align: center;
+
+    &::before {
+        content: $t;
+        display: block;
+        font-size: rem(14);
+        font-weight: normal;
+        margin-bottom: 20px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: rem(100);
+        height: 2px;
+        background-color: $color-main;
+        margin: $space-l auto 0;
+    }
+
+}
+
 body {
     color: $color-text;
     font-size: rem(14);
@@ -108,6 +137,10 @@ img {
         line-height: math.div(29, 24);
         letter-spacing: ls(100);
     }
+}
+
+p {
+    overflow-wrap: anywhere; //長いアルファベットを改行
 }
 
 .gnav {
@@ -149,18 +182,39 @@ img {
 // =================================================================
 
 .mainvisual {
-    padding-bottom: rem(80);
+    padding-bottom: $space-xxxxl;
+
+    &__inner {
+        @include inner();
+    }
+}
+
+.philosphhy {
+    padding-bottom: $space-xxxxl;
 
     &__inner {
         @include inner();
     }
 
 
+    &__title {
+        @include title--main("philosphhy")
+    }
 
 
+    &__text {
+        max-width: rem(780);
+        margin: auto;
+        display: grid;
+        row-gap: rem(60);
+        text-align: center;
+    }
 
+    p {
+        line-height: math.div(34, 14);
 
-
-
-
+        @include mq(philosophy) {
+            word-break: keep-all;
+        }
+    }
 }
