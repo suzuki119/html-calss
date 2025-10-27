@@ -1,0 +1,76 @@
+body {
+  color: #000;
+  font-size: 0.875rem;
+  font-family: "Helvetica Neue", Arial, "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.7142857143;
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.header {
+  padding: 2.5rem 0;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2083333333;
+  letter-spacing: 0.1em;
+}
+
+.gnav__list {
+  display: grid;
+  grid-auto-flow: column;
+  -moz-column-gap: 1.875rem;
+       column-gap: 1.875rem;
+}
+.gnav__item {
+  font-size: 0.75rem;
+  line-height: 1.1666666667;
+}
+.gnav__active {
+  color: #E40065;
+}
+
+.footer {
+  padding: 5rem 0;
+  background-color: #2F2F2F;
+  color: #fff;
+  text-align: center;
+}
+.footer__inner {
+  max-width: 1000px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copy {
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.6666666667;
+}
+
+.mainvisual {
+  padding-bottom: 5rem;
+}
+.mainvisual__inner {
+  max-width: 1000px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=style.css.map */
